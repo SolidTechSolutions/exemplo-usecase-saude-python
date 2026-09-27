@@ -1,9 +1,9 @@
 """
 [EN]    Health Documents (Receita Médica e correlatos) use case — single sign+rubric endpoint, KMS custody.
-        Start: uvicorn main:app --port 8098 --reload
+        Start: uvicorn main:app --port 8101 --reload
 
 [PT-BR] Caso de uso Documentos de Saúde — endpoint único de assinatura+rubrica, custódia KMS.
-        Iniciar: uvicorn main:app --port 8098 --reload
+        Iniciar: uvicorn main:app --port 8101 --reload
 """
 
 import logging
@@ -43,4 +43,4 @@ async def sign_documento(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8098)
+    uvicorn.run(app, host="0.0.0.0", port=8101)

@@ -24,11 +24,11 @@ Padrão: médico (`2.16.76.1.4.2.2.*`, configurável em `.env`). Outras: farmac�
 python -m venv venv && source venv/bin/activate   # ou venv\Scripts\activate no Windows
 pip install -r requirements.txt
 cp .env.example .env   # edite com seu token
-uvicorn main:app --port 8098 --reload
+uvicorn main:app --port 8101 --reload
 ```
 
 ```
-curl -X POST http://localhost:8098/api/saude/sign-documento \
+curl -X POST http://localhost:8101/api/saude/sign-documento \
   -F "document=@receita.pdf" -F "kmsCode=$KMS_CODE" -F "documentType=prescricao" \
   -F "professionalName=Fulano de Tal" -F "professionalRegistro=123456" \
   -F "professionalUf=SP" -F "professionalEspecialidade=Cardiologia" \
@@ -66,7 +66,7 @@ This project demonstrates integrating with the **SolidSign API** to sign health 
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
-uvicorn main:app --port 8098 --reload
+uvicorn main:app --port 8101 --reload
 ```
 
 ## Other certification methods
@@ -100,7 +100,7 @@ Este proyecto demuestra la integración con la **SolidSign API** para firmar doc
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
-uvicorn main:app --port 8098 --reload
+uvicorn main:app --port 8101 --reload
 ```
 
 ## Otros métodos de certificación
